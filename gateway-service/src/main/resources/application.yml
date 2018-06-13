@@ -1,0 +1,41 @@
+spring:  
+  application: 
+    name: gateway-service
+server:
+  port: ${PORT:8765}
+info:
+  component: GateWay Server
+  endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+    registerWithEureka: false
+ribbon:
+  eureka:
+    enabled: true
+# Its very important to skipPrefix otherwise redirection wont work 
+zuul:
+  prefix: /cashavail
+  routes:
+    variance: 
+      path: /variance/**
+      serviceId: variance-service
+      stripPrefix: false
+    adjustment: 
+      path: /adjustment/**
+      serviceId: adjustment-service
+      stripPrefix: false
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    org.springframework.cloud.netflix: DEBUG
+  

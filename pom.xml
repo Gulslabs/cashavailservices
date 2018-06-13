@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.guls.cashavail.services</groupId>
+	<artifactId>cashavailservices</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>cashavailservices</name>
+	<description>Parent Project for Cash Avail Micro-Services</description>
+	<!-- Parenting from Spring Cloud Starter; which parents from Spring boot 
+		starter 1.3.5.RELEASE -->
+	<parent>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-parent</artifactId>
+		<version>Brixton.RELEASE</version>
+	</parent>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<spring-boot-maven-plugin.version>1.4.2.RELEASE</spring-boot-maven-plugin.version>
+		<spring-cloud-dependencies.version>Brixton.SR7</spring-cloud-dependencies.version>
+		<spring-cloud-starter-eureka.version>1.2.3.RELEASE</spring-cloud-starter-eureka.version>
+		<spring-cloud-starter-config.version>1.2.2.RELEASE</spring-cloud-starter-config.version>
+		<spring.boot>1.4.2.RELEASE</spring.boot>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<modules>
+		<module>common-interfaces</module>
+		<module>common-domain</module>
+		<module>adjusment-service</module>
+		<module>variance-service</module>
+		<module>gateway-service</module>
+		<module>discovery-service</module>
+	</modules>
+</project>
