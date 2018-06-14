@@ -3,4 +3,4 @@
 	- Adding **log-trace-service** that simply enables Zipkin Server
 	- Adding Slueth-Sampler to **adjustment-srevice** & **variance-service**
 
-**Note** Refer `Master Branch` for the basic setup.   
+**Note:**  Refer `Master Branch` for the basic setup.   
