@@ -8,48 +8,37 @@
 		<artifactId>cashavailservices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>variance-service</artifactId>
-	<name>variance-service</name>
-	<url>http://cashavail.fmr.com</url>
+	<artifactId>logtrace-service</artifactId>
+	<name>logtrace-service</name>
+	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.guls.cashavail.services</groupId>
-			<artifactId>common-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin-server</artifactId>
+			<version>1.16.2</version>
 		</dependency>
 		<dependency>
-			<groupId>com.guls.cashavail.services</groupId>
-			<artifactId>common-interfaces</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin</artifactId>
+			<version>1.16.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin-autoconfigure-ui</artifactId>
+			<version>1.16.2</version>
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>variance-service</finalName>
+		<finalName>gateway-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.guls.cashavail.variance.Application</mainClass>
+					<mainClass>com.guls.cashavail.logtrace.Application</mainClass>
 					<addResources>true</addResources>
 				</configuration>
 				<executions>
@@ -62,4 +51,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

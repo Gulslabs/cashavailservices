@@ -1,0 +1,5 @@
+spring:  
+  application: 
+    name: logtrace-service
+server:  
+  port: ${PORT:9411}

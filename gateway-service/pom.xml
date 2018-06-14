@@ -8,9 +8,7 @@
 		<artifactId>cashavailservices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.guls.cashavail.services</groupId>
 	<artifactId>gateway-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>gateway-service</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -25,6 +23,19 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zuul</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!--  Do we need slueth and zipkin in gateway-service?  -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+			</dependency>
 	</dependencies>
 	<build>
 		<finalName>gateway-service</finalName>
